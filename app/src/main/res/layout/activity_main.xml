@@ -6,27 +6,47 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <fragment
+<!--    <fragment-->
+<!--        android:id="@+id/fragment_send"-->
+<!--        android:name="com.example.fragmenttofragment.SendFragment"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        tools:layout="@layout/fragment_send"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/fragment_receive"-->
+<!--        />-->
+    
+    <FrameLayout
         android:id="@+id/fragment_send"
-        android:name="com.example.fragmenttofragment.SendFragment"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        tools:layout="@layout/fragment_send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/fragment_receive"
-        />
+        app:layout_constraintBottom_toTopOf="@+id/divider"/>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"/>
 
     <fragment
         android:id="@+id/fragment_receive"
         android:name="com.example.fragmenttofragment.ReceiveFragment"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         tools:layout="@layout/fragment_receive"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fragment_send"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/divider"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
